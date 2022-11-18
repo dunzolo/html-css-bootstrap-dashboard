@@ -31,11 +31,15 @@ header{
     width: 100%;
     height: 80px;
 }
+
+.mobile-logo{
+    display: none;
+}
 /* fine header */
 
 /* inizio sidebar */
 #sidebar{
-    width: 80px;
+    width: 100px;
     height: 100%;
     background-color: #051E34;
 }
@@ -43,36 +47,57 @@ header{
 
 /* inizio main */
 main{
-    width: calc(100vw - 80px);
+    width: calc(100vw - 100px);
 }
 
 #main-top{
-    height: 100px;
-    background-color: yellow;
+    background-color: #1B72E8;
+}
+
+#plus{
+    display: none;
 }
 
 #main-container{
     height: calc(100% - 100px);
-    background-color: green;
 }
 /* fine main */
 
 /* media query */
 /* mobile first */
 @media screen and (max-width: 992px){
+    .mobile-logo{
+        display: block;
+    }
+
+    .logo{
+        display: none;
+    }
+    
     #sidebar{
         width: 50px;
     }
 
+    
+    .inline-list .fa-list, .inline-list .fa-circle-question, .inline-list .fa-ellipsis-vertical{
+        display: none;
+    }
+    
+    #sidebar span{
+        display: none;
+    
+    }
     main{
         width: calc(100vw - 50px);
     }
 
-    .inline-list .fa-list, .inline-list .fa-circle-question, .inline-list .fa-ellipsis-vertical{
+    #plus{
+        display: block;
+    }
+
+    #mobile-app, #web-app, #blog-app{
         display: none;
     }
 
-    #sidebar span{
-        display: none;
-    }
+    
 }

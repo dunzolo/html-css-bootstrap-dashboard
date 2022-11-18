@@ -3,3 +3,40 @@
     margin: 0;
     box-sizing: border-box;
 }
+
+/* utils */
+#wrapper{
+    display: flex;
+    height: calc(100vh - 80px);
+    width: 100%;
+}
+
+/* inizio header */
+header{
+    background-color: aqua;
+    width: 100%;
+    height: 80px;
+}
+/* fine header */
+
+/* inizio sidebar */
+#sidebar{
+    width: 80px;
+    height: 100%;
+    background-color: red;
+}
+/* fine sidebar */
+
+/* inizio main */
+#main-top{
+    width: calc(100vw - 80px);
+    height: 100px;
+    background-color: yellow;
+}
+
+#main-container{
+    width: calc(100vw - 80px);
+    height: calc(100% - 100px);
+    background-color: green;
+}
+/* fine main */

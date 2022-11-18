@@ -11,9 +11,10 @@
         <title>Document</title>
     </head>
     <body>
+        <!-- mobile first -->
         <header class="d-flex align-items-center justify-content-center">
             <div class="container-fluid">
-                <div class="row w-100 align-items-center">
+                <div class="row align-items-center">
                     <div class="col-1 col-lg-2">
                         <img class="w-100" src="./img/logo.svg" alt="">
                     </div>
@@ -23,7 +24,7 @@
                         </form>
                     </div>
                     <div class="col-1 col-lg-2">
-                        <ul class="inline-list">
+                        <ul class="inline-list justify-content-center">
                             <li class="p-2"><i class="fa-solid fa-list"></i></li>
                             <li class="p-2"><i class="fa-solid fa-circle-question"></i></li>
                             <li class="p-2"><i class="fa-solid fa-ellipsis-vertical"></i></li>
@@ -34,8 +35,17 @@
             </div>
         </header>
         <div id="wrapper">
-            <div id="sidebar">
-
+            <div id="sidebar" class="flex-column d-flex justify-content-between">
+                <div id="sidebar-top" class="text-white p-2">
+                    <ul class="style-type-none p-0">
+                        <li><i class="fa-solid fa-house"></i><span>Home</span></li>
+                        <li><i class="fa-solid fa-chart-simple"></i><span>Stats</span> </li>
+                        <li><i class="fa-solid fa-signal"></i><span>Signals</span></l>
+                    </ul>
+                </div>
+                <div id="sidbar-bottom" class="text-white p-2">
+                    <i class="fa-solid fa-gear"></i><span>Admin</span>
+                </div>
             </div>
             <main>
                 <div id="main-top">

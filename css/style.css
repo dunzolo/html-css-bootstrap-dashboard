@@ -26,9 +26,18 @@
     list-style-type: none;
 }
 
+.background-lightgrey{
+    background-color: lightgrey;
+}
+
 .border-black{
     border: 1px solid black;
 }
+
+.color-orange{
+    color:#FF8F00
+}
+
 
 /* inizio header */
 header{
@@ -36,8 +45,12 @@ header{
     height: 50px;
 }
 
+/* search-bar:placeholder */
+/* font-size */
+
 .mobile-logo{
     display: none;
+    height: 50px;
 }
 /* fine header */
 
@@ -52,6 +65,7 @@ header{
 /* inizio main */
 main{
     width: calc(100vw - 100px);
+    overflow-y: auto;
 }
 
 #main-top{
@@ -72,7 +86,6 @@ table img{
 /* fine main */
 
 /* media query */
-/* mobile first */
 @media screen and (max-width: 992px){
     .mobile-logo{
         display: block;
@@ -87,9 +100,9 @@ table img{
     }
 
     
-    .inline-list .fa-list, .inline-list .fa-circle-question, .inline-list .fa-ellipsis-vertical{
+    /* .inline-list .fa-list, .inline-list .fa-circle-question, .inline-list .fa-ellipsis-vertical{
         display: none;
-    }
+    } */
     
     #sidebar span{
         display: none;

@@ -86,28 +86,20 @@ table img{
 /* fine main */
 
 /* media query */
-@media screen and (max-width: 992px){
-    .mobile-logo{
-        display: block;
-    }
-
-    .logo{
-        display: none;
-    }
-    
+@media screen and (max-width: 992px){   
     #sidebar{
         width: 50px;
     }
-
-    
-    /* .inline-list .fa-list, .inline-list .fa-circle-question, .inline-list .fa-ellipsis-vertical{
-        display: none;
-    } */
     
     #sidebar span{
         display: none;
     
     }
+
+    .offcanvas.offcanvas-end{
+        width: 100%;
+    }
+
     main{
         width: calc(100vw - 50px);
     }

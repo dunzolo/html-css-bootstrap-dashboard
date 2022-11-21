@@ -15,14 +15,13 @@
             <div class="container-fluid">
                 <div class="row align-items-center">
                     <div class="col-auto">
-                        <!-- d-none d-lg-block -->
                         <!-- logo desktop -->
-                        <img class="w-100 logo" src="./img/logo.svg" alt="logo">
+                        <img class="w-100 logo d-none d-lg-block" src="./img/logo.svg" alt="logo">
                         <!-- logo mobile -->
-                        <!-- d-lg-none -->
-                        <img class="w-100 mobile-logo" src="./img/mobile-logo.png" alt="mobile-logo">
+                        <img class="w-100 mobile-logo d-block d-lg-none" src="./img/mobile-logo.png" alt="mobile-logo">
                     </div>
                     <div class="col">
+                        <!-- search bar -->
                         <form class="container-fluid">
                             <div class="input-group">
                               <span class="input-group-text background-lightgrey" id="basic-addon1"><i class="fa-solid fa-magnifying-glass"></i></span>
@@ -30,6 +29,7 @@
                             </div>
                     </div>
                     <div class="col-auto">
+                        <!-- icon list dropdown -->
                         <ul class="inline-list justify-content-center">
                             <li class="d-none d-lg-block me-3"><i class="fa-solid fa-list"></i></li>
                             <li class="d-none d-lg-block me-3"><i class="fa-solid fa-circle-question"></i></li>
@@ -92,7 +92,81 @@
                             <div class="col-12 order-1 col-md-4 order-md-0 col-lg-2 p-2">
                                 <!-- <label for="new-student" class="form-label">Nuovo studente</label> -->
                                 <span>Nuovo studente</span>
-                                <button type="button" id="new-student" name="new-student" class="btn btn-outline-light">+</button>
+                                <button class="btn btn-outline-light" type="button" name="new-student" data-bs-toggle="offcanvas" data-bs-target="#staticBackdrop" aria-controls="staticBackdrop">
+                                    +
+                                </button>
+                                <div class="offcanvas offcanvas-end w-50" data-bs-backdrop="static" tabindex="-1" id="staticBackdrop" aria-labelledby="staticBackdropLabel">
+                                    <div class="offcanvas-header">
+                                        <h5 class="offcanvas-title text-black" id="staticBackdropLabel">Inserisci nuovo studente</h5>
+                                        <button type="button" class="btn-close text-black" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                                    </div>
+                                    <div class="text-black p-2">
+                                        <form class="g-3">
+                                            <div class="row">
+                                                <div class="col-md-6 mb-2">
+                                                    <label for="input-name" class="form-label">Nome</label>
+                                                    <input type="text" class="form-control" name="input-name" id="input-name">
+                                                </div>
+                                                <div class="col-md-6 mb-2">
+                                                    <label for="input-lastname" class="form-label">Cognome</label>
+                                                    <input type="text" class="form-control" name="input-lastname" id="input-lastname">
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-6 mb-2">
+                                                    <label for="input-email" class="form-label">Email</label>
+                                                    <div class="input-group">
+                                                        <div class="input-group-text">@</div>
+                                                        <input type="email" class="form-control" name="input-email" id="input-email">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6 mb-2">
+                                                    <label for="input-password" class="form-label">Password</label>
+                                                    <input type="password" class="form-control" name="input-password" id="input-password">
+                                                </div>
+                                            </div>
+                                            <div class="col-12 mb-2">
+                                                <label for="input-address" class="form-label">Indirizzo</label>
+                                                <input type="text" class="form-control" name="input-address" id="input-address">
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-6 mb-2">
+                                                    <label for="input-city" class="form-label">Citt&agrave;</label>
+                                                    <input type="text" class="form-control" name="input-city" id="input-city">
+                                                </div>
+                                                <div class="col-md-4 mb-2">
+                                                    <label for="input-state" class="form-label">Stato</label>
+                                                    <select id="input-state" name="input-state" class="form-select">
+                                                        <option selected>Scegli...</option>
+                                                        <option>Italia</option>
+                                                        <option>Spagna</option>
+                                                        <option>Francia</option>
+                                                    </select>
+                                                </div>
+                                                <div class="col-md-2 mb-2">
+                                                    <label for="input-CAP" class="form-label">CAP</label>
+                                                    <input type="text" class="form-control" name="input-CAP" id="input-CAP">
+                                                </div>
+                                            </div>
+                                            <div class="col-12 mb-3">
+                                                <label for="input-photo" class="form-label">Foto</label>
+                                                <input class="form-control" type="file" name="input-photo" id="input-photo">
+                                            </div>
+                                            <div class="col-12 mb-3">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" id="input-chackbox" name="input-chackbox">
+                                                    <label class="form-check-label" for="input-chackbox">
+                                                        Seleziona per proseguire
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="col-12">
+                                                <button type="submit" class="btn btn-primary">Salva</button>
+                                                <button type="submit" class="btn btn-warning">Svuota</button>
+                                            </div>
+                                          </form>
+                                    </div>
+                                </div>
                             </div>
                         </div>
 

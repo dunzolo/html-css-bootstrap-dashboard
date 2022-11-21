@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+body{
+    font-family: 'Roboto', sans-serif;
+}
+
 /* utils */
 #wrapper{
     display: flex;
@@ -18,6 +22,7 @@
 .inline-list{
     list-style-type: none;
     display: flex;
+    align-items: baseline;
     margin-bottom: 0;
     padding-left: 0;
 }
@@ -38,25 +43,20 @@
     color:#FF8F00
 }
 
-
 /* inizio header */
 header{
     width: 100%;
     height: 50px;
 }
 
-/* search-bar:placeholder */
-/* font-size */
-
 .mobile-logo{
-    display: none;
     height: 50px;
 }
 /* fine header */
 
 /* inizio sidebar */
 #sidebar{
-    width: 100px;
+    width: 50px;
     height: 100%;
     background-color: #051E34;
 }
@@ -64,7 +64,7 @@ header{
 
 /* inizio main */
 main{
-    width: calc(100vw - 100px);
+    width: calc(100vw - 50px);
     overflow-y: auto;
 }
 
@@ -80,37 +80,34 @@ main{
     height: calc(100% - 100px);
 }
 
+.table td:nth-of-type(2), .table th:nth-of-type(2){
+    display: none;
+}
+
+.offcanvas.offcanvas-end{
+    width: 100%;
+}
+
 table img{
     width: 25px;
 }
 /* fine main */
 
 /* media query */
-@media screen and (max-width: 992px){   
+@media screen and (min-width: 768px){   
     #sidebar{
-        width: 50px;
+        width: 100px;
     }
-    
-    #sidebar span{
-        display: none;
-    
+
+    .table td:nth-of-type(2), .table th:nth-of-type(2){
+        display: table-cell;
     }
 
     .offcanvas.offcanvas-end{
-        width: 100%;
+        width: 50%;
     }
 
     main{
-        width: calc(100vw - 50px);
+        width: calc(100vw - 100px);
     }
-
-    #plus{
-        display: block;
-    }
-
-    #mobile-app, #web-app, #blog-app{
-        display: none;
-    }
-
-    
 }

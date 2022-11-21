@@ -7,6 +7,9 @@
         <!-- CSS only -->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet"> 
         <link rel="stylesheet" href="css/style.css">
         <title>Document</title>
     </head>
@@ -18,7 +21,7 @@
                         <!-- logo desktop -->
                         <img class="w-100 logo d-none d-lg-block" src="./img/logo.svg" alt="logo">
                         <!-- logo mobile -->
-                        <img class="w-100 mobile-logo d-block d-lg-none" src="./img/mobile-logo.png" alt="mobile-logo">
+                        <img class="mobile-logo d-block d-lg-none" src="./img/mobile-logo.png" alt="mobile-logo">
                     </div>
                     <div class="col">
                         <!-- search bar -->
@@ -54,13 +57,13 @@
             <div id="sidebar" class="flex-column d-flex justify-content-between">
                 <div id="sidebar-top" class="text-white p-2">
                     <ul class="style-type-none p-0">
-                        <li><i class="fa-solid fa-house"></i><span>Home</span></li>
-                        <li><i class="fa-solid fa-chart-simple"></i><span>Stats</span> </li>
-                        <li><i class="fa-solid fa-signal"></i><span>Signals</span></l>
+                        <li class="d-flex align-items-center p-2"><i class="fa-solid fa-house me-md-1"></i><span class="d-none d-md-block">Home</span></li>
+                        <li class="d-flex align-items-center p-2"><i class="fa-solid fa-chart-simple me-md-1"></i><span class="d-none d-md-block">Stats</span> </li>
+                        <li class="d-flex align-items-center p-2"><i class="fa-solid fa-signal me-md-1"></i><span class="d-none d-md-block">Signals</span></l>
                     </ul>
                 </div>
-                <div id="sidbar-bottom" class="text-white p-2">
-                    <i class="fa-solid fa-gear"></i><span>Admin</span>
+                <div id="sidbar-bottom" class="text-white d-flex align-items-center p-2">
+                    <i class="fa-solid fa-gear me-md-1 p-2"></i><span class="d-none d-md-block">Admin</span>
                 </div>
             </div>
             <main>
@@ -68,18 +71,18 @@
                     <div class="container-fluid text-white">
                         <div class="row align-items-center">
                             <div class="col-12 order-2 col-md-4 order-md-0 col-lg-6 p-2">
-                                <div class="title d-flex">
-                                    <h2>Boolean</h2>
-                                    <h6><span class="badge bg-dark">Piano blaze</span></h6>
+                                <div class="title d-flex align-items-center">
+                                    <h2 class="pe-2">Boolean</h2>
+                                    <span class="badge bg-dark">Piano blaze</span>
                                 </div>
                                 <div>
                                     <ul class="inline-list">
-                                        <li><h6><span class="badge bg-dark">3 app</span></h6></li>
-                                        <li><h6><span class="badge">>></span></h6></li>
-                                        <li><h6><span id="mobile-app" class="badge bg-dark">Boolean mobile app</span></h6></li>
-                                        <li><h6><span id="web-app" class="badge bg-dark">Boolean web app</span></h6></li>
-                                        <li><h6><span id="blog-app" class="badge bg-dark">Boolean blog app</span></h6></li>
-                                        <li><h6><span id="plus" class="badge bg-dark">+</span></h6></li>
+                                        <li><span class="badge bg-dark">3 app</span></li>
+                                        <li><span class="badge">>></span></li>
+                                        <li><span class="badge bg-dark d-none d-lg-block me-1">Boolean mobile app</span></li>
+                                        <li><span class="badge bg-dark d-none d-lg-block me-1">Boolean web app</span></li>
+                                        <li><span class="badge bg-dark d-none d-lg-block me-1">Boolean blog app</span></li>
+                                        <li><span class="badge bg-dark d-md-none">+</span></li>
                                     </ul>
                                 </div>
                             </div>
@@ -90,12 +93,11 @@
                                 <h2>125</h2>
                             </div>
                             <div class="col-12 order-1 col-md-4 order-md-0 col-lg-2 p-2">
-                                <!-- <label for="new-student" class="form-label">Nuovo studente</label> -->
                                 <span>Nuovo studente</span>
                                 <button class="btn btn-outline-light" type="button" name="new-student" data-bs-toggle="offcanvas" data-bs-target="#staticBackdrop" aria-controls="staticBackdrop">
                                     +
                                 </button>
-                                <div class="offcanvas offcanvas-end w-50" data-bs-backdrop="static" tabindex="-1" id="staticBackdrop" aria-labelledby="staticBackdropLabel">
+                                <div class="offcanvas offcanvas-end overflow-auto" data-bs-backdrop="static" tabindex="-1" id="staticBackdrop" aria-labelledby="staticBackdropLabel">
                                     <div class="offcanvas-header">
                                         <h5 class="offcanvas-title text-black" id="staticBackdropLabel">Inserisci nuovo studente</h5>
                                         <button type="button" class="btn-close text-black" data-bs-dismiss="offcanvas" aria-label="Close"></button>
@@ -310,7 +312,7 @@
                                     </div>
                                 </div>
                                 <!-- section F.A.Q. -->
-                                <div class="card">
+                                <div class="card mb-3">
                                     <div class="card-header fs-4">
                                       F.A.Q.
                                     </div>

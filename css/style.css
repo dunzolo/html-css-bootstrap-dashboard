@@ -11,7 +11,7 @@ body{
 /* utils */
 #wrapper{
     display: flex;
-    height: calc(100vh - 80px);
+    height: calc(100vh - 50px);
     width: 100%;
 }
 
